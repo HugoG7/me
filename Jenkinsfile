@@ -14,8 +14,8 @@ pipeline {
     stage('Test') {
       steps {
         sh 'npm run test'
-        emailext(subject: 'Approve Test', body: 'Please approve this tests to continue with the deployment', attachLog: true, to: 'tester')
-        input(message: 'Approve?', submitter: 'tester', ok: 'Please Accept')
+        emailext(subject: 'Approve Test', body: 'Please approve this tests to continue with the deployment', attachLog: true, to: 'messi')
+        input(message: 'Approve?', submitter: 'messi', ok: 'Please Accept')
       }
     }
   }
